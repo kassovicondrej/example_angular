@@ -5,15 +5,15 @@
     "types": []
   },
   "files": [
-    "../../example_angular/src/main.ts",
-    "../../example_angular/src/polyfills.ts"
+    "src/main.ts",
+    "src/polyfills.ts"
   ],
   "include": [
-    "../../example_angular/src/**/*.d.ts"
+    "src/**/*.d.ts"
   ],
   "exclude": [
-    "../../example_angular/src/test.ts",
-    "../../example_angular/src/**/*.spec.ts",
-    "../../example_angular/src/**/*.worker.ts"
+    "src/test.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.worker.ts"
   ]
 }

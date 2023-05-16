@@ -8,11 +8,11 @@
     ]
   },
   "files": [
-    "../../example_angular/src/test.ts",
-    "../../example_angular/src/polyfills.ts"
+    "src/test.ts",
+    "src/polyfills.ts"
   ],
   "include": [
-    "../../example_angular/src/**/*.spec.ts",
-    "../../example_angular/src/**/*.d.ts"
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
   ]
 }

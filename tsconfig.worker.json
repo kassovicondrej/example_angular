@@ -10,6 +10,6 @@
     "types": []
   },
   "include": [
-    "../../example_angular/src/**/*.worker.ts"
+    "src/**/*.worker.ts"
   ]
 }
