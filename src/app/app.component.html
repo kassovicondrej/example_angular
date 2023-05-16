@@ -1,0 +1,33 @@
+<h1>
+  {{ title }}
+</h1>
+
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Products</a>
+  <a *ngIf="useCartSubject" routerLink="/products/cart" routerLinkActive="active">Cart ({{cartProductsNb$ | async}})</a>
+  <a *ngIf="!useCartSubject" routerLink="/products/cart" routerLinkActive="active">Cart ({{ cartProductsNb() }})</a>
+  <a routerLink="/test" routerLinkActive="active">Errors</a>
+  <a routerLink="/worker" routerLinkActive="active">Web Worker</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  <a routerLink="/admin" routerLinkActive="active">Admin</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<app-notification></app-notification>
+
+<footer>
+  <hr>
+  <a href="http://www.angularacademy.ca" target="_blank">www.angularacademy.ca</a> 2023 (using Angular {{version}})
+  <div class="right">
+    <span *ngIf="isOnline$ | async">
+      online
+    </span>
+    <span *ngIf="!(isOnline$ | async)">
+      offline
+    </span> |
+    <a (click)="login()" *ngIf="!isLoggedIn">login</a>
+    <a (click)="logout()" *ngIf="isLoggedIn">logout</a>
+  </div>
+</footer>
