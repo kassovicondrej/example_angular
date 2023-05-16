@@ -1,6 +1,39 @@
 {
-	"printWidth": 140,
 	"singleQuote": true,
-	"useTabs": true,
-	"endOfLine": "crlf"
+	"printWidth": 100,
+	"tabWidth": 2,
+	"useTabs": false,
+	"trailingComma": "all",
+	"bracketSpacing": true,
+	"semi": false,
+	"htmlWhitespaceSensitivity": "ignore",
+	"arrowParens": "always",
+	"endOfLine": "auto",
+	"overrides": [
+		{
+			"files": [
+				"**/*.scss",
+				"**/*.html"
+			],
+			"options": {
+				"singleQuote": false
+			}
+		}
+	],
+	"importOrder": [
+		"^@angular(.*)$",
+		"^rxjs(.*)$",
+		"^@ngxs(.*)$",
+		"^@bmi(.*)$",
+		"^@app(.*)$",
+		"^[@?a-z]",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"importOrderParserPlugins": [
+		"typescript",
+		"classProperties",
+		"decorators-legacy"
+	]
 }
