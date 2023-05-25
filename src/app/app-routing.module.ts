@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 
 import { LoginRouteGuardService } from './services/login-route-guard.service'
 
@@ -7,9 +7,9 @@ import { LoginComponent } from './shared/pages/login.component'
 import { AdminComponent } from './shared/pages/admin.component'
 import { ContactComponent } from './shared/pages/contact.component'
 import { HomeComponent } from './shared/pages/home.component'
-import { ErrorComponent } from './shared/pages/error.component'
 import { TestComponent } from './shared/pages/test.component'
 import { DemoWorkerComponent } from './shared/pages/demo-worker.component'
+import { ErrorComponent } from './shared/pages/error.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,6 +23,8 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [LoginRouteGuardService] },
   { path: 'test', component: TestComponent },
   { path: 'worker', component: DemoWorkerComponent },
+  { path: 'error', component: ErrorComponent },
+  { path: '**', redirectTo: '/error?status=404' },
 ]
 
 @NgModule({
